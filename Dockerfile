@@ -29,7 +29,7 @@ RUN mix local.hex --force && \
 # RUN mix hex.repo add oban https://getoban.pro/repo --fetch-public-key $FP --auth-key $AUTH_KEY || true
 
 # Copia apenas o necessário para cache de dependências
-COPY mix.exs mix.lock ./
+COPY mix.exs ./
 
 RUN mix deps.get --only prod
 RUN mix deps.compile
