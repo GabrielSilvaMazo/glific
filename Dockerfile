@@ -1,8 +1,4 @@
-ARG ELIXIR_VERSION
-ARG ERLANG_VERSION
-ARG ALPINE_VERSION
-
-FROM hexpm/elixir:${ELIXIR_VERSION}-erlang-${ERLANG_VERSION}-alpine-${ALPINE_VERSION}
+FROM hexpm/elixir:1.18.3-erlang-26.2.3-alpine-3.18.3
 
 # These two args need to stay here – otherwise they will be empty at RUN stage
 ARG NODE_VERSION
