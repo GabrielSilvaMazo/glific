@@ -1,7 +1,7 @@
-defmodule Glific.Repo.Migrations.UpgradeObanProToV1_6 do
+defmodule Glific.Repo.Migrations.AddObanPro do
   use Ecto.Migration
 
-  def up, do: Oban.Pro.Migration.up(version: "1.6.0", prefix: "global")
-
-  def down, do: Oban.Pro.Migration.down(version: "1.5.0", prefix: "global")
+  def change do
+    # Desativado para usar o Oban open-source básico
+  end
 end
