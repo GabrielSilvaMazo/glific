@@ -102,7 +102,7 @@ defmodule Glific.MixProject do
       {:gettext, "~> 0.22"},
       {:decimal, "~> 2.0"},
       {:jason, "~> 1.4"},
-      {:jose, "~> 1.11"},
+      {:jose, "~> 1.11", override: true},
       {:plug_cowboy, "~> 2.0"},
       {:ecto_enum, "~> 1.4"},
       {:dialyxir, "~> 1.2", only: [:dev | @test_envs], runtime: false},
