@@ -70,7 +70,10 @@ check_origin =
 # Glific endpoint configs
 config :glific, GlificWeb.Endpoint,
   server: true,
-  http: [:inet6, port: http_port],
+  http: [
+    ip: {0, 0, 0, 0},
+    port: String.to_integer(System.get_env("PORT") || "4000")
+  ],
   check_origin: check_origin,
   secret_key_base: env!("SECRET_KEY_BASE", :string!),
   url: [host: env!("BASE_URL", :string!)],
