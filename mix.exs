@@ -4,11 +4,11 @@ defmodule Glific.MixProject do
   @github_url "https://github.com/glific/glific/"
   @home_url "https://glific.io"
   @test_envs [:test, :test_full]
-  @oban_envs [:prod, :dev] ++ @test_envs
+  # @oban_envs [:prod, :dev] ++ @test_envs
   # comment above line
   # if you don't have Oban pro license, this is your best hack
   # uncomment below line
-  # @oban_envs [:prod]
+   @oban_envs [:prod]
 
   def project do
     [
