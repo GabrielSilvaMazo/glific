@@ -33,3 +33,6 @@ RUN mix compile
 EXPOSE 4000
 
 ENTRYPOINT ["/bin/sh", "/app/glific/config/entrypoint.sh"]
+
+# Garante que as migrações rodam antes de subir o servidor web
+CMD ["sh", "-c", "mix ecto.migrate && mix phx.server"]
