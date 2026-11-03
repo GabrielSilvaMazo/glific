@@ -1,4 +1,4 @@
-FROM hexpm/elixir:1.15.7-erlang-25.3.2.7-alpine-3.18.4
+FROM hexpm/elixir:1.18.3-erlang-27.3.3-alpine-3.21.3
 
 # These two args need to stay here – otherwise they will be empty at RUN stage
 ARG NODE_VERSION
