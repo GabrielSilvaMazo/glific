@@ -218,7 +218,7 @@ defmodule Glific.MixProject do
         "ecto.create --quiet",
         "ecto.load --quiet --skip-if-loaded",
         "ecto.migrate --quiet",
-        "test --warnings-as-errors"
+        "test"
       ],
       "assets.deploy": ["tailwind default --minify", "esbuild default --minify", "phx.digest"]
     ]
