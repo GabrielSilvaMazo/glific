@@ -18,24 +18,18 @@ WORKDIR /app/glific
 RUN mix local.hex --force && \
     mix local.rebar --force
 
-# Copia mix.exs e mix.lock primeiro (para cache)
-COPY mix.exs mix.lock ./
+COPY mix.exs ./
+COPY mix.lock* ./
 
-# Como o Oban Pro está desabilitado, forçamos a limpeza de deps não usadas
 RUN mix deps.get --only prod
 RUN mix deps.compile
 
-# Copia o restante do código
 COPY . .
 
-# Garante a pasta de certificados
 RUN mkdir -p priv/cert
 
-# Compila a aplicação
 RUN mix compile
 
-# Porta padrão (o Render sobrescreve com $PORT)
 EXPOSE 4000
 
-# Usa o entrypoint
 ENTRYPOINT ["/bin/sh", "/app/glific/config/entrypoint.sh"]
