@@ -27,7 +27,7 @@ RUN mix local.hex --force && \
     mix local.rebar --force
 
 # configure hex to use oban repo
-RUN mix hex.repo add oban https://getoban.pro/repo --fetch-public-key public --auth-key public || true
+# RUN mix hex.repo add oban https://getoban.pro/repo --fetch-public-key public --auth-key public || true
 
 # Install mkcert
 RUN wget -O mkcert https://github.com/FiloSottile/mkcert/releases/download/v1.4.3/mkcert-v1.4.3-linux-amd64 && \
