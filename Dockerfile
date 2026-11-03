@@ -59,7 +59,7 @@ RUN /usr/local/bin/mkcert --install && \
 COPY mix.lock mix.exs .
 
 # do the setup, break into steps for caching during debugging
-RUN mix deps.get
+RUN HEX_AUDIT=off mix deps.get
 RUN mix deps.compile
 
 # Lets make sure everything is in /app
